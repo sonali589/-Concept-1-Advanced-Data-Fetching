@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build:development": "cross-env NODE_ENV=development next build",
+    "build:staging": "cross-env NODE_ENV=staging next build",
+    "build:production": "cross-env NODE_ENV=production next build",
     "start": "next start",
     "lint": "eslint"
   },
@@ -15,6 +17,8 @@
   },
   "devDependencies": {
     "babel-plugin-react-compiler": "1.0.0",
+    "cross-env": "^10.1.0",
+    "dotenv-cli": "^11.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.0.8"
   }
